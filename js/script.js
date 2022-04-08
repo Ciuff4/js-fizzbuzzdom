@@ -16,5 +16,10 @@ for(let= i=1; i<max; i++){
     buttonEl.className="button";
     buttonEl.append(i);
     containerJs.append(buttonEl)
-    console.log(i);
+
+    if(i % 3===0){
+        buttonEl.classList.add("frizz")
+        buttonEl.innerHTML="Frizz"
+    }
+    
 }
