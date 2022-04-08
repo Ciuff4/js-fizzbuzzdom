@@ -11,15 +11,28 @@ const buttonEl= document.querySelector(".button")
 
 const max=100
 
-for(let= i=1; i<max; i++){
+
+for(let i=1; i<max; i++){
     const buttonEl= document.createElement("div");
     buttonEl.className="button";
     buttonEl.append(i);
     containerJs.append(buttonEl)
 
-    if(i % 3===0){
+    if((i% 3===0) && (i%5===0 )){
+        buttonEl.classList.add("frizzbuzz")
+        buttonEl.innerHTML="FrizzBuzz"
+        console.log("frizzbuzz");
+
+    }else if(i % 5===0){
+        buttonEl.classList.add("buzz")
+        buttonEl.innerHTML="Buzz"
+        console.log("buzz");
+
+    }else if(i % 3===0){
         buttonEl.classList.add("frizz")
         buttonEl.innerHTML="Frizz"
+        console.log("frizz");
+    }else{
+        console.log(i)
     }
-    
 }
